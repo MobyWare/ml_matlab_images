@@ -1,0 +1,9 @@
+version: '2.1'
+services:
+  matlab-r-peak:
+    image: mobyware/matlab_compiler_run-time:8.1.0
+    #restart: always
+    command: cmd.exe "..\files\run.bat"
+    #command: printMessage.exe "Hi"
+    volumes:
+      - ./apps/test:c:/applications/matlab/files

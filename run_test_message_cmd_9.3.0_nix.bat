@@ -1,0 +1,1 @@
+docker run -it -v C:/Users/mdick/Documents/Projects/DevProjects/Databank/repos/data-bank-poc/matlab_micoroservice/apps/test_message_nix:/opt/matlab/apps mobyware/matlab_compiler_run-time:9.3.0-linux /bin/bash

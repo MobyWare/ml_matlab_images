@@ -1,0 +1,7 @@
+version: '2.1'
+services:
+  matlab-r-peak:
+    image: mobyware/matlab_compiler_run-time:9.3.0-linux
+    command:  bash ./run_testMessage.sh /usr/local/MATLAB/MATLAB_Runtime/v93 "Hi"
+    volumes:
+      - ./apps/test_message_nix:/opt/matlab/apps
