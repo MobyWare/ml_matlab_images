@@ -1,0 +1,7 @@
+version: '2.1'
+services:
+  matlab-r-peak:
+    image: mobyware/matlab_compiler_run-time:9.3.0-linux
+    command:  bash ./run_main.sh /usr/local/MATLAB/MATLAB_Runtime/v93 ./data/demo1.mat
+    volumes:
+      - ./apps/r_peak:/opt/matlab/apps
