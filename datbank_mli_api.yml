@@ -1,0 +1,46 @@
+swagger: "2.0"
+info:
+  description: "API for ZOLL Machine Learning Infrastructure"
+  version: "1.0.0"
+  title: "databank-mli-api"
+  contact:
+    name: "Mohinder Dick"
+    email: "mdick@zoll.com"
+  license:
+    name: "Commercial"
+host: "databank.mli.zoll.com"
+schemes:
+- "http"
+consumes:
+- "application/json"
+produces:
+- "application/json"
+paths:
+  /review:
+    post:
+      summary: "Creates new entry"
+      consumes:
+        - application/json
+      parameters:
+        - in: body
+          name: review
+          description: "The review to create"
+          schema:
+            $ref: "#/definitions/Review"
+      responses:
+        200:
+          description: OK
+    get:
+      summary: "Retrieve review"
+      responses:
+        200:
+          description: OK
+definitions:
+  Review:
+    type: "object"
+    description: "a session in which signal(s) is examined"
+    required:
+      - reviewRef
+    properties:
+      reviewRef:
+        type: string
